@@ -1,5 +1,15 @@
 <%@ include file="/templates/header.jsp" %>
 
+<%
+    if (session.getAttribute("user") != null) {
+        response.sendRedirect("profile");
+    }
+
+    response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); //HTTP 1.1
+    response.setHeader("Pragma", "no-cache");   //HTTP 1.0
+    response.setHeader("Expires", "0"); //Proxies
+%>
+
 <div class="container">
     <div class="form-wrapper w-25 mx-auto p-4 shadow my-5">
         <form action ="admin" method="post">
