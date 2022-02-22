@@ -12,6 +12,7 @@
                 <label class="form-label">Password:</label>
                 <input type="password" class="form-control" placeholder="admin123" name="password">
             </div>
+            <p class="text-danger">${error}</p>
             <div class="d-flex justify-content-center">
                 <button type="submit" class="btn btn-primary">Login</button>
             </div>

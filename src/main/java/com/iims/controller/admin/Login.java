@@ -46,14 +46,17 @@ public class Login extends HttpServlet {
                     resp.sendRedirect("profile");
 
                     session.removeAttribute("username");
+                    session.removeAttribute("error");
                 }
                 else {
+                    session.setAttribute("error", "Sorry, you are not registered.");
                     resp.sendRedirect("admin");
                 }
             } catch (SQLException | ClassNotFoundException e) {
                 e.printStackTrace();
             }
         } else {
+            session.setAttribute("error", "Sorry, you are not registered.");
             resp.sendRedirect("admin");
         }
     }
