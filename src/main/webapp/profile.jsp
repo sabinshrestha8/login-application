@@ -6,9 +6,11 @@
 %>
 <div class="container vh-100 d-flex align-items-center justify-content-center">
     <div>
-        <h2>Welcome ${user.first_name} ${user.last_name}!!!</h2>
+        <h2>Welcome <span class="text-success fs-3 fst-italic">${user.first_name} ${user.last_name}!!!</span></h2>
+        <div class="d-flex justify-content-center">
+            <a href="admin" class="btn btn-danger">Logout</a>
+        </div>
     </div>
-    <a href="admin" class="btn btn-danger">Logout</a>
 </div>
 
 <%@ include file="/templates/footer.jsp"%>
