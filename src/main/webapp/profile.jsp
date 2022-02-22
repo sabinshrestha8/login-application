@@ -8,7 +8,7 @@
     <div>
         <h2>Welcome <span class="text-success fs-3 fst-italic">${user.first_name} ${user.last_name}!!!</span></h2>
         <div class="d-flex justify-content-center">
-            <a href="admin" class="btn btn-danger">Logout</a>
+            <a href="logout" class="btn btn-danger">Logout</a>
         </div>
     </div>
 </div>
